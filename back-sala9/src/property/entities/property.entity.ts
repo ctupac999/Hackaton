@@ -20,9 +20,6 @@ export class Property {
         meters: string; 
         @Prop({})
         description: string;   
-        @Prop({})
-        descriptioncorta: string;   
-
 };
 
 export const PropertySchema = SchemaFactory.createForClass(Property);

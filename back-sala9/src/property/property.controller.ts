@@ -2,6 +2,7 @@ import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestj
 import { PropertyService } from './property.service';
 import { CreatePropertyDto } from './dto/create-property.dto';
 import { UpdatePropertyDto } from './dto/update-property.dto';
+import { Property } from './entities/property.entity';
 
 @Controller('property')
 export class PropertyController {
@@ -18,10 +19,15 @@ export class PropertyController {
     const propertyCreated = await this.propertyService.create(createPropertyDto);
     return propertyCreated
   }
-  @Get(':id')
-  async findProperty(@Param('id') id: number) {
-    const findProperty = await this.propertyService.findProperty(id);
-    return findProperty
+  // @Get(':id')
+  // async findProperty(@Param('id') id: number) {
+  //   const findProperty = await this.propertyService.findProperty(id);
+  //   return findProperty
+  // }
+  
+  @Get('buscar')
+  async buscar(@Query('palabra') palabra: string): Promise<Property[]> {
+    return this.propertyService.buscarPorPalabra(palabra);
   }
 
   // @Get()

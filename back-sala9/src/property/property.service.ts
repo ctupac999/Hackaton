@@ -24,12 +24,26 @@ export class PropertyService {
     return allProperty;
   }
 
- 
-
-  async findProperty(id: number) : Promise<Property> {
-    const findProperty = await this.propertyModel.findById(id);
-    return findProperty
+  async buscarPorPalabra(palabra: string): Promise<Property[]> {
+    const regex = new RegExp(palabra, 'i'); // 'i' para ignorar mayúsculas y minúsculas
+    return this.propertyModel.find({
+      $or: [
+        { name: regex },
+        { releaseDate: regex },
+        { bedrooms: regex },
+        { city: regex },
+        { meters: regex },
+        { description: regex },
+        // Agrega aquí otros campos que desees buscar
+      ],
+    }).exec();
   }
+
+
+  // async findProperty(id: number) : Promise<Property> {
+  //   const findProperty = await this.propertyModel.findById(id);
+  //   return findProperty
+  // }
 
   // async findPropertyByText(text: string): Promise<Property[]> {
   //   return this.propertyModel
