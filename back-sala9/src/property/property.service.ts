@@ -24,8 +24,8 @@ export class PropertyService {
     return allProperty;
   }
 
-  async buscarPorPalabra(palabra: string): Promise<Property[]> {
-    const regex = new RegExp(palabra, 'i'); // 'i' para ignorar mayúsculas y minúsculas
+  async findByWord(word: string): Promise<Property[]> {
+    const regex = new RegExp(word, 'i'); // 'i' para ignorar mayúsculas y minúsculas
     return this.propertyModel.find({
       $or: [
         { name: regex },

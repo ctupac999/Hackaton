@@ -20,9 +20,9 @@ export class PropertyController {
     return propertyCreated
   }
 
-  @Get('buscar-ciudad')
-  async buscarPorCiudad(@Query('ciudad') ciudad: string): Promise<Property[]> {
-    return this.propertyService.findByCity(ciudad);
+  @Get('findByCity')
+  async findByCity(@Query('city') city: string): Promise<Property[]> {
+    return this.propertyService.findByCity(city);
   }
   // @Get(':id')
   // async findProperty(@Param('id') id: number) {
@@ -30,9 +30,9 @@ export class PropertyController {
   //   return findProperty
   // }
 
-  @Get('buscar')
-  async buscar(@Query('palabra') palabra: string): Promise<Property[]> {
-    return this.propertyService.buscarPorPalabra(palabra);
+  @Get('findByWord')
+  async findByWord(@Query('word') word: string): Promise<Property[]> {
+    return this.propertyService.findByWord(word);
   }
 
   // @Get()
