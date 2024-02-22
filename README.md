@@ -79,15 +79,15 @@ npm run dev
 ```
 ## CONSTRUCCIÓN PARA LA PRODUCCIÓN 
 <p>Para construir tu proyecto para producción, ejecutar los siguientes comandos en cada directorio:</p>
+
 ```
 npm run build
 ```
 
 ## DESPLIEGUE CON RENDER
+<p>Render es una plataforma en la nube que facilita el despliegue y la administración de aplicaciones web.</p>
 
+<p>Para obtener más detalles o interactuar con la base de datos, consultar la <a href="https://docs.render.com" target="_blank">documentación oficial de Render</a>.</p>
 
-```
-
-```
 
   
