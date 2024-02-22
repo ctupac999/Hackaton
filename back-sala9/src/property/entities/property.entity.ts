@@ -8,18 +8,23 @@ export class Property {
         name: string;
         @Prop({ })
         releaseDate: string;
-        @Prop({ required: true })
+        @Prop({})
         bedrooms: number;
-        @Prop({ type: {} })
-        city: {
-                madrid: boolean,
-                gijon: boolean,
-                barcelona: boolean,
-        };
+        @Prop({ })
+        city: string
         @Prop({})
         meters: string; 
         @Prop({})
-        description: string;   
+        description: string;
+        @Prop({})
+        price: string;
+        @Prop({})
+        img1: string;
+        @Prop({})
+        img2: string;
+        @Prop({})
+        img3: string;
+
 };
 
 export const PropertySchema = SchemaFactory.createForClass(Property);
