@@ -1,0 +1,119 @@
+/* contenedor del formulario */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bolder;
+    color: #003459;
+}
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 800px;
+    margin: 50px 0;
+}
+
+/* formulario */
+form {
+    background-color: #F4F4FB;
+    border-radius: 25px;
+    box-shadow: 0 10px 10px 0 rgba(0, 52, 89, 0.3);
+}
+
+/* recuadro del mensaje para el anunciante */
+textarea {
+    color: #003459;
+    width: 361px;
+    height: 151px;
+    border: none;
+    border-radius: 8px;
+}
+
+textarea::placeholder {
+    color: rgba(0, 52, 89, .6);
+    padding: 15px;
+    font-size: 0.8em;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+/* título del formulario */
+form h2 {
+    padding-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+    font-weight: 1000;
+    color: #003459;
+}
+
+/* inputs del formulario */
+input {
+    color: #003459;
+}
+
+.name input {
+    background-color: rgba(0, 52, 89, .9);
+    color: #F4F4FB;
+}
+
+input:focus {
+    outline: none;
+}
+
+.form-container form input {
+    width: 100%;
+    margin: 5px 0;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+}
+
+/* input de la politica de privacidad */
+.checkbox-privacy {
+    margin: 0;
+    font-size: 0.7em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* botón de enviar */
+form button {
+    width: 6rem;
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    background-color: #003459;
+    color: #F4F4FB;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #007EA7;
+    color: #F4F4FB;
+    border: 1px solid #007EA7;
+}
+
+/* modal */
+.modal-content {
+    background-color: #F4F4FB;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #003459;
+    width: 40%;
+    border-radius: 15px;
+    font-family: "Roboto", sans-serif;
+    color: #003459;
+    cursor: pointer;
+}
