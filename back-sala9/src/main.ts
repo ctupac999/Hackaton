@@ -9,9 +9,9 @@ async function bootstrap() {
   const options: CorsOptions = {
     origin: 'http://localhost:5173/', // Reemplaza con el origen de tu aplicación frontend
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    preflightContinue: true,
+    preflightContinue: false,
     optionsSuccessStatus: 204,
-    credentials: true,
+    credentials: false,
     allowedHeaders: 'Origin,X-Requested-With,Content-Type,Accept,Authorization',
   };
 
