@@ -115,7 +115,7 @@ const Formulario = () => {
                 <div className="modal" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', position: 'fixed', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: 'rgba(0, 0, 0, 0.5)' }}>
                     <div className="modal-content" style={{ backgroundColor: '#f4f4fb', padding: '20px', borderRadius: '5px', boxShadow: '2px 2px 5px rgba(0, 0, 0, 0.2)' }}>
                         <span className="close" onClick={closeModal}>&times;</span>
-                        <p>Su mensaje ha sido enviado con éxito, pronto el anunciante se contactará con usted!</p>
+                        <p>¡Gracias por su interés! En breve el anunciante se pondrá en contacto.</p>
                     </div>
                 </div>
             )}
