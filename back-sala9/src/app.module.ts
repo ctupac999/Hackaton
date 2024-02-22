@@ -5,7 +5,7 @@ import { PropertyModule } from './property/property.module';
 import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
-  imports: [PropertyModule,  MongooseModule.forRoot('mongodb+srv://cristian:nest2024@nestjs.e0teljn.mongodb.net/albunesNest5')],
+  imports: [PropertyModule,  MongooseModule.forRoot('mongodb+srv://cristian:nest2024@nestjs.e0teljn.mongodb.net/albunesNest6')],
   controllers: [AppController],
   providers: [AppService],
 })
