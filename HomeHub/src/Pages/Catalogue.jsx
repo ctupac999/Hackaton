@@ -1,45 +1,66 @@
-import React from 'react';
-import Navbar from '../components/Navbar'
+import { useState, useEffect } from 'react';
+import Navbar from '../components/Navbar';
 import { Card, Button } from 'react-bootstrap';
 
 export default function Catalogue() {
+
+  const [filteredProperties, setFilteredProperties] = useState([]);
+    
+    
+    const searchParams = new URLSearchParams(location.search);
+    const city = searchParams.get('city');
+
+    
+    const properties = [     
+      {
+        "name": "",
+        "releaseDate": "",
+        "bedrooms": " ",
+        "city": "",
+        "meters": "",
+        "description": "",
+        "price": "",
+        "igm1": "",
+        "igm2": "",
+        "igm3": ""
+            },
+        ];              
+            
+
+    // Filtrar propiedades por ciudad
+    useEffect(() => {
+      const filtered = properties.filter(property => property.city === city);
+      setFilteredProperties(filtered);
+  }, [city, properties]);
+
+
   return (
     <div>
-    <Navbar />
-    <div className="bg-white p-8">
-      <h1 className="text-4xl font-bold text-center my-4">Connecting Hearts to Homes</h1>
-      <div className="flex justify-center mb-6">
-        <div className="w-16 h-1 bg-gray-300" />
-      </div>
-      <div className="row">
-        <div className="col-md-6">
-          <Card>
-            <Card.Img variant="top" src="/img/room.avif" alt="Modern house" />
-            <Card.Body>
-              <Card.Title>Piso moderno de dos dormitorios en el corazón de la ciudad, calle de Muntaner</Card.Title>
-              <Card.Text>
-                Piso moderno de dos dormitorios en el centro de la ciudad. Luminoso y amplio, con suelos de madera, cocina totalmente equipada. Cuenta con aire acondicionado central y aire acondicionado. No se admiten mascotas. Disponible para alquiler a largo plazo.
-              </Card.Text>
-              <Button variant="primary">Contactar</Button>
-            </Card.Body>
-            <Card.Footer className="text-muted">Footer content</Card.Footer>
-          </Card>
+      <Navbar />
+      <div className="bg-white p-8">
+        <h1 className="text-4xl font-bold text-center my-4">Connecting Hearts to Homes</h1>
+        <div className="flex justify-center mb-6">
+          <div className="w-16 h-1 bg-gray-300" />
         </div>
-        <div className="col-md-6">
-          <Card>
-            <Card.Img variant="top" src="/img/room2.avif" alt="Cozy apartment" />
-            <Card.Body>
-              <Card.Title>Piso moderno de dos dormitorios en el corazón de la ciudad</Card.Title>
-              <Card.Text>
-                Piso moderno de dos dormitorios en el centro de la ciudad. Luminoso y amplio, con suelos de madera, cocina totalmente equipada. Cuenta con aire acondicionado central y aire acondicionado. No se admiten mascotas. Disponible para alquiler a largo plazo.
-              </Card.Text>
-              <Button variant="primary">Contactar</Button>
-            </Card.Body>
-            <Card.Footer className="text-muted">Footer content</Card.Footer>
-          </Card>
+        <div className="row">
+          {filteredProperties.map(property => (
+            <div className="col-md-6" key={property._id}>
+              <Card>
+                <Card.Img variant="top" src={property.img1} alt={property.name} />
+                <Card.Body>
+                  <Card.Title>{property.name}</Card.Title>
+                  <Card.Text>{property.description}</Card.Text>
+                  <div className='buttons-catalogue'>
+                    <Button variant="primary">Contactar</Button>
+                    <Button variant="primary">Ver más</Button>
+                  </div>
+                </Card.Body>
+                
+              </Card>
+            </div>
+          ))}
         </div>
       </div>
-    </div>
     </div>
   );
 }
