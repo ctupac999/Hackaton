@@ -1,0 +1,26 @@
+/* Home */
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar{
+    gap: 30px;
+    color: #003459;
+}
+
+.link-navbar{
+    text-decoration: none;
+    color: #003459;
+}
+
+.link-navbar:hover{
+    color: #007ea7;
+    font-weight: 500;
+}
+
+.logo-navbar{
+    width: auto;    
+    height: 100px;
+    margin: 10px;
+}

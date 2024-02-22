@@ -5,19 +5,20 @@ import {Link} from "react-router-dom"
 export default function Navbar() {
   return (
     <section>
-        <Link to="/">
-            <img className="h-12 w-auto px-2" src="/icons/Logo.png"></img>
-          </Link>
+        
         <header>
-                <ul className="nav justify-content-end">
+          <Link to="/">
+              <img className="logo-navbar" src="/icons/Logo.png"></img>
+            </Link>
+                <ul className="nav justify-content-end navbar">
                     <li className="nav-item">
-                        <a className="nav-link active" aria-current="page" href="#">Publica tu anuncio</a>
+                      <Link className='link-navbar' to="#">Publica tu anuncio</Link>
                     </li>
                     <li className="nav-item">
-                       <Link to="/favorites">Favoritos</Link>
+                       <Link className='link-navbar' to="/favorites">Favoritos</Link>
                     </li>
                     <li className="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                      <Link className='link-navbar' to="#">Iniciar sesión</Link>
                     </li>
                 </ul>
             </header>
