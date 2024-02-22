@@ -12,13 +12,16 @@ export default function Navbar() {
             </Link>
                 <ul className="nav justify-content-end navbar">
                     <li className="nav-item">
-                      <Link className='link-navbar' to="#">Publica tu anuncio</Link>
+                      <Link className='link-navbar' to="/catalogue">Catálogo</Link>
                     </li>
                     <li className="nav-item">
                        <Link className='link-navbar' to="/favorites">Favoritos</Link>
                     </li>
                     <li className="nav-item">
-                      <Link className='link-navbar' to="#">Iniciar sesión</Link>
+                      <Link className='link-navbar' to="/details">Details</Link>
+                    </li>
+                    <li className="nav-item">
+                      <Link className='link-navbar' to="/contact">Contacto</Link>
                     </li>
                 </ul>
             </header>
