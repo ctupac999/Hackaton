@@ -30,10 +30,9 @@ export class PropertyService {
       $or: [
         { name: regex },
         { releaseDate: regex },
-        { bedrooms: regex },
-        { city: regex },
         { meters: regex },
         { description: regex },
+        {city:regex}
         // Agrega aquí otros campos que desees buscar
       ],
     }).exec();
