@@ -3,10 +3,10 @@ export class CreatePropertyDto {
     releaseDate: string;
     bedrooms: number;
     city: {
-        Madrid: boolean,
-        Gijon: boolean,
-        song3: boolean
-    };
+        madrid: boolean;
+        barcelona: boolean;
+        gijon: boolean;
+      };
     meters: string;
     description: string;
     price: string;

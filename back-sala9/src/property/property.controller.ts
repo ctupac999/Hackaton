@@ -19,12 +19,17 @@ export class PropertyController {
     const propertyCreated = await this.propertyService.create(createPropertyDto);
     return propertyCreated
   }
+
+  @Get('buscar-ciudad')
+  async buscarPorCiudad(@Query('ciudad') ciudad: string): Promise<Property[]> {
+    return this.propertyService.findByCity(ciudad);
+  }
   // @Get(':id')
   // async findProperty(@Param('id') id: number) {
   //   const findProperty = await this.propertyService.findProperty(id);
   //   return findProperty
   // }
-  
+
   @Get('buscar')
   async buscar(@Query('palabra') palabra: string): Promise<Property[]> {
     return this.propertyService.buscarPorPalabra(palabra);

@@ -10,8 +10,12 @@ export class Property {
         releaseDate: string;
         @Prop({})
         bedrooms: number;
-        @Prop({ })
-        city: string
+        @Prop({ type: Object})
+        city: {
+                madrid:boolean,
+                barcelona:boolean,
+                gijon:boolean,
+        }
         @Prop({})
         meters: string; 
         @Prop({})

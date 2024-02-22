@@ -38,6 +38,12 @@ export class PropertyService {
     }).exec();
   }
 
+  async findByCity(ciudad: string): Promise<Property[]> {
+    return this.propertyModel.find({
+      [`city.${ciudad}`]: true,
+    }).exec();
+  }
+
 
   // async findProperty(id: number) : Promise<Property> {
   //   const findProperty = await this.propertyModel.findById(id);
