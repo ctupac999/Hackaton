@@ -1,4 +1,4 @@
-# Hackaton-Sala9
+# Hackaton
 
 ## DESCRIPCIÓN DEL PROYECTO 📓
 
